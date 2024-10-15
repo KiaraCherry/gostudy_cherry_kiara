@@ -1,15 +1,59 @@
-
 /*-------------------------------------
  * customize material design icon sizes 
  *-------------------------------------
  */
 
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
 
 .responsive {
-    width: 100%;
-    height: auto;
-  }
+  width: 100%;
+  height: auto;
+}
+
+.rounded-circle {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  /* Centers the circle horizontally */
+}
+
+.bg-info {
+  background-color: #7fc6a4ff !important;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+  color: #5d737eff;
+}
+
+.btn-info {
+  color: #d6f8d6ff;
+  background-color: #7fc6a4ff;
+  border-color: #5d737eff;
+}
+
+.btn-primary {
+  color: #d6f8d6ff;
+  font-size: 150%;
+  background-color: #5d737eff;
+  border-color: #55505cff;
+  border-width: thick;
+}
+
+body {
+  background-color: #d6f8d6ff;
+}
