@@ -59,6 +59,59 @@ function readQuote(day) {
             console.log("Error calling onSnapshot", error);
         });
 }
+
+function writeSpots() {
+    //define a variable for the collection you want to create in Firestore to populate data
+    var spotsRef = db.collection("Study Spots");
+
+    spotsRef.add({
+        code: "CafVan04",
+        name: "Cafe", //replace with your own city?
+        city: "Vancouver",
+        province: "BC",
+        wifi: "yes",
+        outlets: "yes",
+        washrooms: "yes",
+        details: "Quiet ambiance, friendly staff, great place to study!",
+        open: "9:00am",      //number value
+        close: "10:00pm",     //number value
+        lat: 49.2467097082573,
+        lng: -122.9187029619698,
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
+    });
+    spotsRef.add({
+        code: "LiS01",
+        name: "Semiahmoo Library", //replace with your own city?
+        city: "Surrey",
+        province: "BC",
+        wifi: "yes",
+        outlets: "yes",
+        washrooms: "yes",
+        details: "Quiet rooms, chill place to study",
+        open: "9:30am",      //number value
+        close: "9:00pm",     //number value
+        lat: 49.3399431028579,
+        lng: -122.85908496766939,
+        last_updated: firebase.firestore.Timestamp.fromDate(new Date("March 10, 2022"))
+    });
+    spotsRef.add({
+        code: "OtWR03",
+        name: "Park", //replace with your own city?
+        city: "White ROck",
+        province: "BC",
+        wifi: "no",
+        outlets: "no",
+        washrooms: "yes",
+        details: "Great place to get fresh air and study!",
+        open: "sunrise",      //number value
+        close: "sunset",     //number value
+        lat: 49.38847101455571,
+        lng: -122.94092543551031,
+        last_updated: firebase.firestore.Timestamp.fromDate(new Date("January 1, 2023"))
+    });
+}
+
+writeSpots();
 insertNameFromFirestore();
 readQuote("tuesday");        //calling the function
 getNameFromAuth(); //run the function
